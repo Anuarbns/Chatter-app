@@ -1,79 +1,129 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html>
-    <head>
+<head>
+        <link rel="stylesheet" href="Mycss.css">
     <title>chatter|app</title>
-    <style>
-        body {
-background-color: #CFD8DC;
-font-family: Arial, "sans-serif";
-}
-.Mybars {
-color: #212121;
-background-color: #607D8B;
-}
-.Mychannels p {
-background-color: white;
-}
-button {
-background-color: #9E9E9E;
-text-transform: uppercase;
-color: #455A64;
-}
-#chatb p {
-background-color: white;
-}
-#chatb h3 {
-font-size: medium;
-}
-#chatb h3 em {
-font-size: larger;
-text-transform: none;
-}
-
-</style>
+    <!-- We need to specify the character encoding, since we use chinese characters -->
+        <meta charset="UTF-8">
 </head>
+
 <body>
-
-<section id="chatterb">
-<div class="Mybars" id="chatterbar">
-<h1>chatter|app</h1>
-</div>
-<div class="Mychannels">
-<p><strong>#Dreamers</strong></p>
-<p><strong>#Thewarwithin</strong></p>
-<p><strong>#Cinéphiles</strong></p>
-<p><strong>#Automation</strong></p>
-<p><strong>#Awalkaroundtheearth</strong></p>
-</div>
-<div class="tabbuttons">
-<button type="button">New</button>
-<button type="button">Trending</button>
-<button type="button">Favorites</button>
-</div>
-
-</section>
-<hr>
-<section id="chatb">
-  <div class="Mybars" id="chattbar">
- <h1>#Cinéphiles <small>by stud.worth.correctly</small></h1>
-  </div>
-  
-<div class="MMB">
-<h3>belly.artichoke.zebra Tue,February,5th,14:14 <em>10min.left</em></h3>
-<p>Hello everyone, what's your favorite film</p>
-<button type="button">+5min</button>
-</div>
-<div class="MMB">
-<h3>divide.lizards.following Tue,February,5th,14:15 <em>11min.left</em></h3>
-<p>I would say that <q>No country for old men</q> stands very high on that list</p>
-<button type="button">+5min</button>
-</div>
-<div class="MMB">
-<h3>bleak.lessening.promotes Tue,February,5th,14:18 <em>14min.left</em></h3>
-<p>well having to choose one film, is like deciding that one-day-life is enough</p>
-<button type="button">+5min</button>
-</div>
-</section>
+    <section>
+    <!-- channel area -->
+     <div class="channelarea">
+        <div id="app-bar">
+            <!-- #1 #channels #app-bar -->
+            <h1><img style="height:56px" src="https://ip.lfe.mw.tum.de/sections/moocus.png" alt="moocus">chatter|app</h1>
+        </div>
+        <div>
+            <ul>
+                <!-- #1 #channels #topics -->
+                <li><h2>#Yummy  <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="star-o"></h2></li>
+                <li><h2>#SevenContinents   <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star-o"></h2></li>
+                <li><h2>#KillerApp   <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star-o"></h2></li>
+                <li><h2>#FirstPersonOnMars   <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="star-o"></h2></li>
+                <li><h2>#Octoberfest   <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star-o"></h2></li>
+            </ul>
+        </div>
+        <div id="button-bar">
+            <!-- #1 #channels #buttons -->
+            <button><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="lightbulb">new</button>
+            <button><img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="fire">trending</button>
+            <button><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star">favorites</button>
+        </div>
+     </div>
+    </section>
+    <section>
+     <!-- chat area -->
+     <div class="chatarea">
+        <div id="chat-bar">
+            <!-- #1 #chat #name -->
+            <h1>#SevenContinents<small>by<strong>cheeses.yard.applies</strong></small>
+            </h1>
+        </div>
+        <div class="chattmessages">
+            <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+            <span class="m-data">
+                <h3><strong><a href="https://map.what3words.com/cheeses.yard.applies?utm_source=w3w&utm_medium=owned&utm_campaign=B2C_4561_W3_Pt_Map-Site_Org_WO_en_Main-Site-Explore-Map" target="_blank">cheeses.yard.applies</a></strong>
+    Wed, June 20th, 13:37<em>15 min. left</em>
+                </h3>
+            </span>
+            <!-- #1 #chat #messages depict a short fictional chat-->
+            <p>What's the place you folks call home?</p>
+            <!-- #1 #chat #button subsequent to each message -->
+            <button>+5 min.</button>
+        </div>
+        <div class="chattmessages" >
+            <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+            <h3>
+                <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
+                <strong><a href="https://map.what3words.com/truck.cotton.zone?utm_source=w3w&utm_medium=owned&utm_campaign=B2C_4561_W3_Pt_Map-Site_Org_WO_en_Main-Site-Explore-Map" target="_blank">truck.cotton.zone</a></strong>
+    Wed, June 20th, 13:39
+    <!-- #1 #chat #ttl lives inside the metadata -->
+    <em>4 min. left</em>
+            </h3>
+            <!-- #1 #chat #messages depict a short fictional chat-->
+            <p>BRISBANE! Hang loose!</p>
+            <!-- #1 #chat #button subsequent to each message -->
+            <button>+5 min.</button>
+        </div>
+        <div class="chattmessages">
+            <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+            <h3>
+            <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
+            <strong><a href="https://map.what3words.com/thus.best.dishes?utm_source=w3w&utm_medium=owned&utm_campaign=B2C_4561_W3_Pt_Map-Site_Org_WO_en_Main-Site-Explore-Map" target="_blank">hus.best.dishes</a></strong>
+    Wed, June 20th, 14:02
+    <!-- #1 #chat #ttl lives inside the metadata -->
+    <em>12 min. left</em>
+            </h3>
+            <!-- #1 #chat #messages depict a short fictional chat-->
+            <p>The big apple.</p>
+            <!-- #1 #chat #button subsequent to each message -->
+            <button>+5 min.</button>
+        </div>
+        <div class="chattmessages">
+            <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+            <h3>
+            <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
+            <strong><a href="https://map.what3words.com/driveway.helper.magazine?utm_source=w3w&utm_medium=owned&utm_campaign=B2C_4561_W3_Pt_Map-Site_Org_WO_en_Main-Site-Explore-Map" target="_blank">driveway.helper.magazine</a></strong>
+    Wed, June 20th, 14:02
+    <!-- #1 #chat #ttl lives inside the metadata -->
+    <em>7 min. left</em>
+            </h3>
+            <!-- #1 #chat #messages depict a short fictional chat-->
+            <p>Eu sou um Carocas.</p>
+            <!-- #1 #chat #button subsequent to each message -->
+            <button>+5 min.</button>
+        </div>
+        <div class="chattmessages">
+            <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+            <h3>
+            <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
+            <strong><a href="https://map.what3words.com/escapes.pitch.saucepan?utm_source=w3w&utm_medium=owned&utm_campaign=B2C_4561_W3_Pt_Map-Site_Org_WO_en_Main-Site-Explore-Map" target="_blank">escapes.pitch.saucepan</a></strong>
+    Wed, June 20th, 14:07
+    <!-- #1 #chat #ttl lives inside the metadata -->
+    <em>14 min. left</em>
+            </h3>
+            <!-- #1 #chat #messages depict a short fictional chat-->
+            <p>Greetings from the western cape!</p>
+            <!-- #1 #chat #button subsequent to each message -->
+            <button>+5 min.</button>
+        </div>
+        <div class="chattmessages">
+            <!-- #1 #chat #metadata contains location, weekday, day, and time  -->
+            <h3>
+            <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
+            <strong><a href="https://map.what3words.com/meaning.identity.pays?utm_source=w3w&utm_medium=owned&utm_campaign=B2C_4561_W3_Pt_Map-Site_Org_WO_en_Main-Site-Explore-Map" target="_blank">meanings.identity.pays</a></strong>
+    Wed, June 20th, 04:08
+    <!-- #1 #chat #ttl lives inside the metadata -->
+    <em>15 min. left</em>
+            </h3>
+            <!-- #1 #chat #messages depict a short fictional chat-->
+            <p>北京</p>
+            <!-- #1 #chat #button subsequent to each message -->
+            <button>+5 min.</button>
+        </div>
+     </div>
+    </section>
 </body>
-
 </html>
