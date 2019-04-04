@@ -1,79 +1,175 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-    <head>
-    <title>chatter|app</title>
-    <style>
-        body {
-background-color: #CFD8DC;
-font-family: Arial, "sans-serif";
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width, initial-scale=1">
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> 
+
+<title>chatter|app</title>
+ <style>
+ /* General style */
+* {
+   padding: 0;
+   margin: 0;
 }
+body {
+	background-color: #CFD8DC;
+	font-family: 'Roboto' Arial, "sans-serif";
+      }
+ /* bars */    
 .Mybars {
-color: #212121;
-background-color: #607D8B;
-}
-.Mychannels p {
-background-color: white;
-}
-button {
-background-color: #9E9E9E;
-text-transform: uppercase;
-color: #455A64;
-}
-#chatb p {
-background-color: white;
-}
-#chatb h3 {
-font-size: medium;
-}
-#chatb h3 em {
-font-size: larger;
-text-transform: none;
+	color: white;
+	background-color: #607D8B;
+	padding-top: 22px;
+             padding-bottom: 22px;
+             max-width: 100%;
+         }
+     
+ /* Channels */
+#channels {
+	
+
+	
 }
 
-</style>
+#Mychannels ul li {
+	        background-color: white;
+            list-style-type: none;
+            border-bottom: 1px solid lightgrey;
+            padding: 16px;
+            font-size: 16px;
+                   }	       
+
+#Mychannels p {
+	        background-color: white;
+               }
+
+#selected-channel li {
+        	border-left: 10px solid #607D8B;
+        	color: #607D8B;
+}
+
+ /* button-tab */   
+#button-tab {
+	       background-color: white;
+       	display: flex;
+       	justify-content: space-evenly;
+       	bottom: 0%;
+   
+}         
+#button-tab button {
+	        background-color: white;	
+            color: black;
+            text-transform: uppercase;
+            border: none;
+            font-size: 13px;
+            box-sizing: border-box;
+            width: 32%;
+            height: 72px;
+            padding: 16px;
+}
+
+#button-tab #selectedb {
+	border-bottom: 4px solid #607D8B;
+	color: #607D8B;
+}
+#chat {
+	display: none;
+}
+
+#chatbar {
+	padding-top: 22px;
+             padding-bottom: 22px;
+             max-width: 100%;
+}
+
+#chat .MMB {
+	background-color: white;
+}
+#chat p {
+             padding: 16px;
+}
+
+#chat .MMB h3 {
+	background-color: #CFD8DC;
+	font-size: medium;
+}
+
+#chat .MMB h3 em {
+	font-size: larger;
+	text-transform: none;
+}
+
+#chat button {
+	        background-color: #607D8B;
+            color: white;
+            text-transform: uppercase;
+}
+#selected-chat {
+	margin-left: 18%;
+}
+
+ </style>
 </head>
 <body>
-
-<section id="chatterb">
-<div class="Mybars" id="chatterbar">
-<h1>chatter|app</h1>
-</div>
-<div class="Mychannels">
-<p><strong>#Dreamers</strong></p>
-<p><strong>#Thewarwithin</strong></p>
-<p><strong>#Cinéphiles</strong></p>
-<p><strong>#Automation</strong></p>
-<p><strong>#Awalkaroundtheearth</strong></p>
-</div>
-<div class="tabbuttons">
-<button type="button">New</button>
-<button type="button">Trending</button>
-<button type="button">Favorites</button>
-</div>
-
-</section>
-<hr>
-<section id="chatb">
-  <div class="Mybars" id="chattbar">
- <h1>#Cinéphiles <small>by stud.worth.correctly</small></h1>
-  </div>
+  <div id="channels">  
+   <div class="Mybars" id="channel-bar">
+    <h1>chatter|app</h1>
+   </div>
   
-<div class="MMB">
-<h3>belly.artichoke.zebra Tue,February,5th,14:14 <em>10min.left</em></h3>
-<p>Hello everyone, what's your favorite film</p>
-<button type="button">+5min</button>
-</div>
-<div class="MMB">
-<h3>divide.lizards.following Tue,February,5th,14:15 <em>11min.left</em></h3>
-<p>I would say that <q>No country for old men</q> stands very high on that list</p>
-<button type="button">+5min</button>
-</div>
-<div class="MMB">
-<h3>bleak.lessening.promotes Tue,February,5th,14:18 <em>14min.left</em></h3>
-<p>well having to choose one film, is like deciding that one-day-life is enough</p>
-<button type="button">+5min</button>
-</div>
-</section>
-</body>
+   <div id="Mychannels">
+    <ul>
+     <li><p><strong>#Dreamers</strong></p></li>
+     <li><p><strong>#Thewarwithin</strong></p></li>
+      <span id="selected-channel">
+      
+       <li onclick="$('#chat').show()";><p><strong>#Cinéphiles</strong></p></li>
+      
+      </span>
+      
+     <li><p><strong>#Automation</strong></p></li>
+     <li><p><strong>#Awalkaroundtheearth</strong></p></li>
+    </ul>
+   </div>
+  
+   <div id="button-tab">
+    <button type="button" id="selectedb">New</button>
+    <button type="button">Trending</button>
+    <button type="button">Favorites</button>
+   </div>
+  </div>
+   
+   
+   <hr>
 
+ <div id="chat">
+   <div class="Mybars" id="chatbar">
+    <h1>#Cinéphiles <small>by stud.worth.correctly</small></h1>
+   </div>
+  
+   <div class="MMB" id="selected-chat">
+    <h3>stud.worth.correctly Tue,February,5th,14:14 <em>10min.left</em></h3>
+     <p>Hello everyone, what's your favorite film</p>
+      <button type="button">+5min</button>
+   </div>
+ 
+   <div class="MMB">
+    <h3>divide.lizards.following Tue,February,5th,14:15 <em>11min.left</em></h3>
+     <p>I would say that <q>No country for old men</q> stands very high on that list</p>
+      <button type="button">+5min</button>
+   </div>
+
+   <div class="MMB">
+    <h3>bleak.lessening.promotes Tue,February,5th,14:18 <em>14min.left</em></h3>
+     <p>well having to choose one film, is like deciding that one-day-life is enough</p>
+      <button type="button">+5min</button>
+   </div>
+  </div>
+   
+</body>  
 </html>
+    
+    
+    
+    
